@@ -2,17 +2,35 @@
 
 Chef repository to install nginx package on client/server.
 
+# Overview
+
+Every Chef Infra installation needs a Chef Repository. This is the place where cookbooks, policyfiles, config files and other artifacts for managing systems with Chef Infra will live. We strongly recommend storing this repository in a version control system such as Git and treating it like source code.
+
+## prerequisite
+
+Download and install ChefDK
+
 ## Installation
 
 To install chef work station, you can run:
 
+##### UNIX, Linux, and macOS
+On UNIX, Linux, and macOS systems, invoke the Chef Software Install script with:
+
+curl -L https://omnitruck.chef.io/install.sh | sudo bash
+
+##### Microsoft Windows
+On Microsoft Windows systems, invoke the Chef Software Install script using Windows PowerShell:
+
+. { iwr -useb https://omnitruck.chef.io/install.ps1 } | iex; install
+
 ## Usage
 
 In the project directory, you can run:
+    `sudo chef-client --local-mode chef-nginx/cookbooks/nginx/recipes/default.rb`
 
-# Overview
-
-Every Chef Infra installation needs a Chef Repository. This is the place where cookbooks, policyfiles, config files and other artifacts for managing systems with Chef Infra will live. We strongly recommend storing this repository in a version control system such as Git and treating it like source code.
+To verify the installation, you can run:
+    `nginx -v`
 
 # Repository Directories
 
