@@ -27,9 +27,11 @@ On Microsoft Windows systems, invoke the Chef Software Install script using Wind
 ## Usage
 
 In the project directory, you can run:
+
     `sudo chef-client --local-mode chef-nginx/cookbooks/nginx/recipes/default.rb`
 
 To verify the installation, you can run:
+
     `nginx -v`
 
 # Repository Directories
